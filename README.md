@@ -52,20 +52,30 @@ Para rodar o GASA, você precisará apenas do Python 3 instalado em sua máquina
    python gasa.py
 
 
-💻 Tecnologias Utilizadas
+# 💻 Tecnologias Utilizadas
 
-Python 3 - Linguagem base do projeto.
+- **Python 3** — Linguagem base do projeto.
+- **Requests** — Sincronização e requisições HTTP com APIs de segurança externas.
+- **Hashlib** — Processamento e hashing criptográfico local.
+- **Secrets** — Geração de criptografia aleatória forte com nível de sistema operacional.
+- **Re** — Expressões regulares para validação estrutural de e-mails.
 
-Requests - Sincronização e requisições HTTP com APIs de segurança externas.
+---
 
-Hashlib - Processamento e hashing criptográfico local.
+# 📄 Licença
 
-Secrets - Geração de criptografia aleatória forte com nível de sistema operacional.
+Este projeto está sob a licença **MIT**.
 
-Re - Expressões regulares para validação estrutural de e-mails.
+Isso significa que você pode **usar, modificar, distribuir e adaptar** o código livremente, desde que mantenha os créditos originais.
 
-📄 Licença
-Este projeto está sob a licença MIT. Isso significa que você pode modificar, distribuir e utilizar o código livremente, desde que inclua os créditos originais. Veja o arquivo LICENSE no repositório para mais detalhes.
+Consulte o arquivo **LICENSE** presente neste repositório para mais informações.
 
-⚠️ Disclaimer
-Esta ferramenta possui finalidade estritamente educacional, preventiva e de auditoria defensiva (Blue Team). Use para proteger suas próprias credenciais e conscientizar sua equipe.
+---
+
+# ⚠️ Disclaimer
+
+> **Aviso**
+>
+> Esta ferramenta foi desenvolvida **exclusivamente para fins educacionais, preventivos e de auditoria defensiva (Blue Team)**.
+>
+> Utilize-a apenas para proteger sistemas e credenciais sob sua autorização. O uso inadequado ou não autorizado é de inteira responsabilidade do usuário.

@@ -40,5 +40,29 @@ Para rodar o GASA, você precisará apenas do Python 3 instalado em sua máquina
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/SEU-USUARIO/gasa.git](https://github.com/SEU-USUARIO/gasa.git)
+   git clone https://github.com/SEU-USUARIO/gasa.git
    cd gasa
+
+Instale as dependências:
+
+Bash
+pip install requests
+Execute a ferramenta:
+
+Bash
+python gasa.py
+💻 Tecnologias Utilizadas
+Python 3 - Linguagem base do projeto.
+
+Requests - Sincronização e requisições HTTP com APIs de segurança externas.
+
+Hashlib - Processamento e hashing criptográfico local.
+
+Secrets - Geração de criptografia aleatória forte com nível de sistema operacional.
+
+Re - Expressões regulares para validação estrutural de e-mails.
+
+📄 Licença
+Este projeto está sob a licença MIT. Isso significa que você pode modificar, distribuir e utilizar o código livremente, desde que inclua os créditos originais. Veja o arquivo LICENSE no repositório para mais detalhes.
+
+Disclaimer: Esta ferramenta possui finalidade estritamente educacional, preventiva e de auditoria defensiva (Blue Team). Use para proteger suas próprias credenciais e conscientizar sua equipe.

@@ -40,17 +40,18 @@ Para rodar o GASA, você precisará apenas do Python 3 instalado em sua máquina
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/SEU-USUARIO/gasa.git
+   git clone https://github.com/cristiano-martins/gasa.git
    cd gasa
 
-Instale as dependências:
+2. **Instale as dependências:**
+   ```bash
+   pip install requests
+   
+3. **Execute a ferramenta:**
+   ```bash
+   python gasa.py
 
-Bash
-pip install requests
-Execute a ferramenta:
 
-Bash
-python gasa.py
 💻 Tecnologias Utilizadas
 Python 3 - Linguagem base do projeto.
 

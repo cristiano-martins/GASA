@@ -1,5 +1,7 @@
 # GASA - Google Account Security Auditor 🛡️
 
+![GASA Dashboard](gasa-screenshot.png)
+
 O **Google Account Security Auditor (GASA)** é uma ferramenta de linha de comando (CLI) desenvolvida em Python voltada para a auditoria defensiva, conscientização cibernética e hardening de credenciais. O principal objetivo do projeto é capacitar usuários e administradores a avaliarem a resiliência de suas identidades digitais contra ataques de força bruta, engenharia social (phishing) e vazamentos de dados conhecidos.
 
 ---

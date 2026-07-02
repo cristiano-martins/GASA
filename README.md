@@ -53,6 +53,7 @@ Para rodar o GASA, você precisará apenas do Python 3 instalado em sua máquina
 
 
 💻 Tecnologias Utilizadas
+
 Python 3 - Linguagem base do projeto.
 
 Requests - Sincronização e requisições HTTP com APIs de segurança externas.
@@ -66,4 +67,5 @@ Re - Expressões regulares para validação estrutural de e-mails.
 📄 Licença
 Este projeto está sob a licença MIT. Isso significa que você pode modificar, distribuir e utilizar o código livremente, desde que inclua os créditos originais. Veja o arquivo LICENSE no repositório para mais detalhes.
 
-Disclaimer: Esta ferramenta possui finalidade estritamente educacional, preventiva e de auditoria defensiva (Blue Team). Use para proteger suas próprias credenciais e conscientizar sua equipe.
+⚠️ Disclaimer
+Esta ferramenta possui finalidade estritamente educacional, preventiva e de auditoria defensiva (Blue Team). Use para proteger suas próprias credenciais e conscientizar sua equipe.

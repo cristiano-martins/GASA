@@ -1,83 +1,180 @@
 # GASA - Google Account Security Auditor 🛡️
 
-![GASA Dashboard](gasa1-screenshot.png)
+![GASA Screenshot](gasa1-screenshot.png)
 
-O **Google Account Security Auditor (GASA)** é uma ferramenta de linha de comando (CLI) desenvolvida em Python voltada para a auditoria defensiva, conscientização cibernética e hardening de credenciais. O principal objetivo do projeto é capacitar usuários e administradores a avaliarem a resiliência de suas identidades digitais contra ataques de força bruta, engenharia social (phishing) e vazamentos de dados conhecidos.
+## 📌 Sobre o Projeto
 
----
+O **Google Account Security Auditor (GASA)** é uma ferramenta de linha de comando (**CLI**) desenvolvida em **Python** com foco em **segurança defensiva (Blue Team)** e aprendizagem de cibersegurança.
 
-## 🚀 Funcionalidades
+O objetivo do projeto é auxiliar utilizadores e estudantes de segurança a realizarem verificações básicas de proteção de contas digitais, analisando fatores como segurança de palavras-passe, exposição em vazamentos conhecidos e boas práticas de hardening.
 
-O ecossistema do GASA é dividido em três módulos analíticos principais:
-
-1. **Auditoria Criptográfica de Senhas:**
-   * Avalia a complexidade estrutural e a entropia da senha digitada.
-   * Estima o tempo necessário para quebra da credencial em um ataque de força bruta offline baseado em clusters de GPUs modernos.
-   * Consulta a API global do *Have I Been Pwned* utilizando o modelo matemático seguro **k-Anonymity**.
-   * Possui um **Gerador de Senhas Fortes** integrado que utiliza o módulo `secrets` do Python para garantir entropia criptográfica segura.
-
-2. **Checklist de Hardening de Conta:**
-   * Questionário técnico interativo para avaliar o nível de resiliência e a postura de defesa ativa do perfil do usuário (MFA, chaves de backup, proteção avançada).
-
-3. **Triagem Preventiva de Phishing:**
-   * Motor de regras simples para avaliar as características de e-mails suspeitos recebidos, ajudando a mitigar ataques de Engenharia Social.
+O GASA foi criado como um projeto educacional para explorar conceitos como **hashing criptográfico, APIs de segurança, privacidade de dados e desenvolvimento seguro em Python**.
 
 ---
 
-## 🔒 Segurança e Privacidade (k-Anonymity)
+# 🚀 Funcionalidades
 
-A privacidade do usuário é a prioridade número um do GASA. Ao verificar se uma senha foi vazada, **a sua senha real nunca é enviada para a internet**. 
+O GASA possui diferentes módulos de análise:
 
-O script utiliza o princípio de anonimato $k$:
-1. A senha é convertida localmente em um hash SHA-1 completo.
-2. Apenas os **5 primeiros caracteres** do hash (o prefixo) são enviados para a API do *Have I Been Pwned*.
-3. O servidor retorna uma lista de todos os hashes vazados na história que começam com aquele mesmo prefixo.
-4. O script compara localmente o restante do hash (o sufixo) com a lista recebida. Se houver correspondência, o sistema indica quantas vezes ela foi exposta.
+## 🔐 1. Análise de Segurança de Senhas
+
+* Avaliação básica da força da palavra-passe.
+* Análise de tamanho, complexidade e características estruturais.
+* Estimativa do nível de resistência contra tentativas automatizadas.
+* Verificação de exposição em vazamentos conhecidos através da API do **Have I Been Pwned (HIBP)**.
+* Geração de palavras-passe fortes utilizando o módulo seguro `secrets` do Python.
 
 ---
 
-## 🛠️ Pré-requisitos e Instalação
+## 🛡️ 2. Checklist de Hardening de Conta
 
-Para rodar o GASA, você precisará apenas do Python 3 instalado em sua máquina e da biblioteca `requests`.
+Um questionário interativo para avaliar práticas importantes de proteção:
 
-1. **Clone o repositório:**
-   ```bash
-   git clone https://github.com/cristiano-martins/gasa.git
-   cd gasa
+* Utilização de autenticação multifator (MFA).
+* Existência de métodos de recuperação seguros.
+* Uso de gestores de palavras-passe.
+* Aplicação de boas práticas de segurança digital.
 
-2. **Instale as dependências:**
-   ```bash
-   pip install requests
-   
-3. **Execute a ferramenta:**
-   ```bash
-   python gasa.py
+No final, o utilizador recebe recomendações para melhorar a postura de segurança da conta.
 
+---
 
-# 💻 Tecnologias Utilizadas
+## 🎣 3. Análise Preventiva de Phishing
 
-- **Python 3** — Linguagem base do projeto.
-- **Requests** — Sincronização e requisições HTTP com APIs de segurança externas.
-- **Hashlib** — Processamento e hashing criptográfico local.
-- **Secrets** — Geração de criptografia aleatória forte com nível de sistema operacional.
-- **Re** — Expressões regulares para validação estrutural de e-mails.
+Módulo educativo para identificar características comuns de mensagens suspeitas:
+
+* Verificação de padrões associados a phishing.
+* Identificação de sinais de engenharia social.
+* Recomendações para evitar ataques baseados em manipulação humana.
+
+---
+
+# 🔒 Privacidade e Segurança
+
+## Consulta segura com Have I Been Pwned (k-Anonymity)
+
+O GASA protege a privacidade do utilizador durante a verificação de vazamentos.
+
+A palavra-passe real **nunca é enviada para serviços externos**.
+
+O processo funciona da seguinte forma:
+
+1. A palavra-passe é processada localmente utilizando SHA-1.
+2. Apenas os primeiros caracteres do hash são enviados para a API do Have I Been Pwned.
+3. A API retorna hashes correspondentes ao prefixo informado.
+4. A comparação final é realizada localmente pelo GASA.
+
+Dessa forma, a palavra-passe original permanece privada durante toda a verificação.
+
+---
+
+# ⚙️ Tecnologias Utilizadas
+
+* **Python 3** — Linguagem principal do projeto.
+* **Requests** — Comunicação com APIs externas.
+* **Hashlib** — Operações de hashing criptográfico.
+* **Secrets** — Geração segura de valores aleatórios.
+* **Regex (Re)** — Validação e análise de padrões.
+
+---
+
+# 📂 Estrutura do Projeto
+
+```text
+GASA/
+│
+├── gasa.py
+├── README.md
+├── requirements.txt
+├── LICENSE
+└── gasa1-screenshot.png
+```
+
+---
+
+# 🛠️ Instalação
+
+## Pré-requisitos
+
+* Python 3.10 ou superior
+* Pip instalado
+
+## Clonar o repositório
+
+```bash
+git clone https://github.com/cristiano-martins/gasa.git
+
+cd gasa
+```
+
+## Instalar dependências
+
+```bash
+pip install -r requirements.txt
+```
+
+## Executar
+
+```bash
+python gasa.py
+```
+
+---
+
+# 🖥️ Exemplo de Execução
+
+```text
+================================
+ GASA - Google Account Security Auditor
+================================
+
+[+] Password Security Analysis
+[+] Checking data exposure...
+[+] Running account hardening checklist
+
+Security Assessment Complete
+
+Recommendations:
+- Enable Multi-Factor Authentication
+- Avoid password reuse
+- Use a password manager
+```
+
+---
+
+# 🛣️ Roadmap
+
+## Concluído
+
+* [x] Password strength analysis
+* [x] HIBP integration
+* [x] Secure password generator
+* [x] Basic hardening checklist
+* [x] CLI interface
+
+## Futuro
+
+* [ ] Exportação de relatórios em PDF/JSON
+* [ ] Interface gráfica (GUI)
+* [ ] Mais verificações de segurança
+* [ ] Sistema de pontuação de risco
+* [ ] Arquitetura modular avançada
 
 ---
 
 # 📄 Licença
 
-Este projeto está sob a licença **MIT**.
+Este projeto está licenciado sob a licença **MIT**.
 
-Isso significa que você pode **usar, modificar, distribuir e adaptar** o código livremente, desde que mantenha os créditos originais.
-
-Consulte o arquivo **LICENSE** presente neste repositório para mais informações.
+Você pode utilizar, modificar e distribuir o código, mantendo os créditos originais.
 
 ---
 
 # ⚠️ Disclaimer
 
-> **Aviso**
->
-> Esta ferramenta foi desenvolvida **exclusivamente para fins educacionais, preventivos e de auditoria defensiva (Blue Team)**.
->
-> Utilize-a apenas para proteger sistemas e credenciais sob sua autorização. O uso inadequado ou não autorizado é de inteira responsabilidade do usuário.
+O GASA foi desenvolvido exclusivamente para **fins educacionais, pesquisa e auditoria defensiva**.
+
+A ferramenta deve ser utilizada apenas em contas e ambientes onde exista autorização.
+
+O autor não se responsabiliza por qualquer uso indevido da ferramenta.
+

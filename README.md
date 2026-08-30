@@ -102,9 +102,9 @@ GASA/
 ## Clonar o repositório
 
 ```bash
-git clone https://github.com/cristiano-martins/gasa.git
+git clone https://github.com/cristiano-martins/GASA.git
 
-cd gasa
+cd GASA
 ```
 
 ## Instalar dependências
